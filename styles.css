@@ -1238,3 +1238,81 @@ img {
         height: 120px;
     }
 }
+
+/* Улучшенные стили для мобильного меню */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 10px 15px;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .nav-link {
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .nav-link i {
+        width: 25px;
+        text-align: center;
+    }
+    
+    .cta-button {
+        margin-top: 20px;
+        justify-content: center;
+        background-color: #4CAF50;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+}
